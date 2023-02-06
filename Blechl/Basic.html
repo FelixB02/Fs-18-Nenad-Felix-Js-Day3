@@ -10,7 +10,9 @@
 </head>
 
 <body>
-    <div id="weather"> </div>
+    <div id="weather">
+        <p id="text"></p>
+    </div>
 
 
 
@@ -32,8 +34,12 @@
 
         if (temperature <= 10) {
             console.log("The weather is cold");
+            document.getElementById("weather").innerHTML += "<img src=https://cdn.pixabay.com/photo/2014/11/28/01/01/jay-548381_1280.jpg alt=`Cold`>";
+            document.getElementById("text").innerHTML = "The weather is cold";
         } else {
             console.log("The weather is moderate");
+            document.getElementById("weather").innerHTML += "<img src=https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014_1280.jpg alt=`Cold`>"
+            document.getElementById("text").innerHTML = "The weather is warm";
         }
     </script>
 </body>
