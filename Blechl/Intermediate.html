@@ -13,6 +13,7 @@
     <h4 id="average"></h4>
 
     <h3 id="h3"></h3>
+    <h3 id="h3_2"></h3>
 
     <script>
         let students = ["Martin", "Thomas", "Klaus", "Maria", "David"];
@@ -77,6 +78,13 @@
             } else {
                 document.getElementById("h3").innerHTML += `${i} <br>`
             }
+        }
+
+        let star = "";
+
+        for (let i = 0; i < 6; i++) {
+            star += "*";
+            document.getElementById("h3_2").innerHTML += `${star} <br>`
         }
     </script>
 </body>
