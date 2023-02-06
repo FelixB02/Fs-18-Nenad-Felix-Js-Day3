@@ -20,10 +20,38 @@ for (let i = 0; i < students.length; i++) {
         avg +=grades[i] / 3
     }
 
-    console.log(avg)
-
-    console.log(students[i])
-
     document.getElementById('grades').innerHTML = `This is the average of the class ${avg}`
 }
+
+
+// ex2
+
+for(let i = 0; i < 100; i++) {
+    if(i % 3 === 0) {
+        document.getElementById('fizz').innerHTML = 'fizz'
+    } else if (i % 5 === 0) {
+        document.getElementById('fizz').innerHTML = 'buzz'
+    } else if (i % 5 === 0 && i % 3 === 0) {
+        document.getElementById('fizz').innerHTML = 'fizzBuzz'
+    } else {
+        document.getElementById('fizz').innerHTML = i
+    }
+}
+
+for(let i = 1; i < 100; i++) {
+    if(i % 3 === 0 && i % 5 == 0) {
+        console.log('fizz buzz')
+    } else if (i % 5 === 0) {
+        console.log('buzz')
+    } else if (i % 3 == 0) {
+        console.log('fizz ')
+    } else {
+        console.log(i)
+    }
+}
+
+
+
+
+
 
