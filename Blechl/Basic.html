@@ -17,30 +17,61 @@
 
 
     <script>
-        let array = [1, 7, -3, 9];
-        let output = 0;
+        // let array = [1, 7, -3, 9];
+        // let output = 0;
 
-        for (let i = 0; i < array.length; i++) {
-            if (output < array[i]) {
-                output = array[i];
+        // for (let i = 0; i < array.length; i++) {
+        //     if (output < array[i]) {
+        //         output = array[i];
+        //     }
+        // }
+        // console.log(output);
+
+
+        // let temperature = Math.floor(Math.random() * 30 - 5);
+
+        // console.log(temperature)
+
+        // if (temperature <= 10) {
+        //     console.log("The weather is cold");
+        //     document.getElementById("weather").innerHTML += "<img src=https://cdn.pixabay.com/photo/2014/11/28/01/01/jay-548381_1280.jpg alt=`Cold`>";
+        //     document.getElementById("text").innerHTML = "The weather is cold";
+        // } else {
+        //     console.log("The weather is moderate");
+        //     document.getElementById("weather").innerHTML += "<img src=https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014_1280.jpg alt=`Cold`>"
+        //     document.getElementById("text").innerHTML = "The weather is warm";
+        // }
+
+
+
+        let numbers = [3, 6, 99, 18, 66, 77, 89];
+        let numbers2 = [1000, 6, 99, 18, 66, 77, 89];
+        let numbers3 = [3, 6, 99, 18, 66, 77, 89];
+
+
+        function average2(input) {
+            let sum = 0;
+
+            for (let i = 0; i < input.length; i++) {
+                sum += input[i];
             }
+            return sum / input.length;
+
         }
-        console.log(output);
 
 
-        let temperature = Math.floor(Math.random() * 30 - 5);
+        console.log(average2(numbers3))
 
-        console.log(temperature)
 
-        if (temperature <= 10) {
-            console.log("The weather is cold");
-            document.getElementById("weather").innerHTML += "<img src=https://cdn.pixabay.com/photo/2014/11/28/01/01/jay-548381_1280.jpg alt=`Cold`>";
-            document.getElementById("text").innerHTML = "The weather is cold";
-        } else {
-            console.log("The weather is moderate");
-            document.getElementById("weather").innerHTML += "<img src=https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014_1280.jpg alt=`Cold`>"
-            document.getElementById("text").innerHTML = "The weather is warm";
+        let a = 12;
+
+        function test() {
+            a = 30;
         }
+        test();
+
+
+        console.log(a);
     </script>
 </body>
 
