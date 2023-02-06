@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h4 id="grades"></h4>
+    <h4 id="average"></h4>
+
+    <h3 id="h3"></h3>
+    <h3 id="h3_2"></h3>
+
+    <script>
+        let students = ["Martin", "Thomas", "Klaus", "Maria", "David"];
+        let grades = [76, 85, 65, 93, 81];
+        let average = 0;
+        // grade = 0;
+
+        for (let i = 0; i < students.length; i++) {
+            // if (grades[i] < 60) {
+            //     document.getElementById("grades").innerHTML += ` ${students[i]} has ${grades[i]} points. That is the grade F <br>`
+            // } else if (grades[i] < 70) {
+            //     document.getElementById("grades").innerHTML += ` ${students[i]} has ${grades[i]} points. That is the grade D <br>`
+            // } else if (grades[i] < 80) {
+            //     document.getElementById("grades").innerHTML += ` ${students[i]} has ${grades[i]} points. That is the grade C <br>`
+            // } else if (grades[i] < 90) {
+            //     document.getElementById("grades").innerHTML += ` ${students[i]} has ${grades[i]} points. That is the grade B <br>`
+            // } else if (grades[i] < 100) {
+            //     document.getElementById("grades").innerHTML += ` ${students[i]} has ${grades[i]} points. That is the grade A <br>`
+            // }
+            // average += grades[i]
+            document.getElementById("grades").innerHTML += ` ${students[i]} has ${grades[i]} points. That is the grade ${grade(grades[i])} <br>`
+        }
+
+        average /= students.length;
+        // if (average < 60) {
+        //     grade = "F";
+        // } else if (average < 70) {
+        //     grade = "D";
+        // } else if (average < 80) {
+        //     grade = "c";
+        // } else if (average < 90) {
+        //     grade = "B";
+        // } else if (average < 100) {
+        //     grade = "A";
+        // }
+
+        function grade(num) {
+            if (num < 60) {
+                return "F";
+            } else if (num < 70) {
+                return "D";
+            } else if (num < 80) {
+                return "C";
+            } else if (num < 90) {
+                return "B";
+            } else if (num < 100) {
+                return "A";
+            }
+        }
+        document.getElementById("average").innerHTML = `The average Points of the students are ${average}. That is the grade ${grade(average)} `
+
+
+
+
+        for (let i = 1; i < 20; i++) {
+            if (i % 5 == 0 && i % 3 == 0) {
+                document.getElementById("h3").innerHTML += "FizzBuzz <br>"
+            } else if (i % 5 == 0) {
+                document.getElementById("h3").innerHTML += "Buzz <br>"
+            } else if (i % 3 == 0) {
+                document.getElementById("h3").innerHTML += "Fizz <br>"
+            } else {
+                document.getElementById("h3").innerHTML += `${i} <br>`
+            }
+        }
+
+        let star = "";
+
+        for (let i = 0; i < 6; i++) {
+            star += "*";
+            document.getElementById("h3_2").innerHTML += `${star} <br>`
+        }
+    </script>
+</body>
+
+</html>
