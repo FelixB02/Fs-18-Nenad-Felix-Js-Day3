@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="input" type="text">
+    <button onclick="saveName()"> Click to save name </button>
+    <br>
+    <p id="output"></p>
+
+    <script>
+        let name = "";
+        let students = ["John", "Jane", "Max", "Felix", "Paul", "Leo", "Matthias", "Viktor", "Dusan", "Alex"];
+        let mathGrades = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+
+        function saveName() {
+            name = document.getElementById("input").value
+            console.log(name)
+
+            if (students.includes(name)) {
+                let index = students.indexOf(name);
+                let correctgrade = mathGrades[index]
+                if (correctgrade < 60) {
+                    document.getElementById("output").innerHTML = `The students name is ${name} and his grade is ${correctgrade}`;
+                    document.getElementById("output").style.color = "red";
+                } else if (correctgrade < 70) {
+                    document.getElementById("output").innerHTML = `The students name is ${name} and his grade is ${correctgrade}`;
+                    document.getElementById("output").style.color = "#a98307";
+                } else if (correctgrade < 100) {
+                    document.getElementById("output").innerHTML = `The students name is ${name} and his grade is ${correctgrade}`;
+                    document.getElementById("output").style.color = "lime";
+                } else if (correctgrade == 100) {
+                    document.getElementById("output").innerHTML = `The students name is ${name} and his grade is ${correctgrade}`;
+                    document.getElementById("output").style.color = "blue";
+                }
+
+
+            } else {
+                console.log("Not found!")
+            }
+        }
+    </script>
+</body>
+
+</html>
